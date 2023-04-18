@@ -100,13 +100,13 @@ var C = function() {
   var t = this, n = t._self._c;
   return n("div", { staticClass: "all-group" }, [t._l(t.thisData, function(r, s) {
     return n("div", { key: s, staticClass: "con-group" }, [t._l(r.group, function(i, d) {
-      return n("div", { key: i.id, staticClass: "margin10" }, [n("el-row", { attrs: { type: "flex", align: "middle" } }, [n("el-col", { attrs: { span: 3 } }, [n("el-dropdown", { on: { command: (e) => t.handle1Command(e, s, d) } }, [n("span", { staticClass: "el-dropdown-link" }, [t._v(" " + t._s(t.value2name(t.condition1, i.c1value))), n("i", { staticClass: "el-icon-arrow-down el-icon--right" })]), n("el-dropdown-menu", { attrs: { slot: "dropdown" }, slot: "dropdown" }, t._l(t.condition0, function(e) {
+      return n("div", { key: i.id, staticClass: "margin10" }, [n("el-row", { attrs: { type: "flex", align: "middle" } }, [n("el-col", { attrs: { span: 3 } }, [n("el-dropdown", { on: { command: (e) => t.handle1Command(e, s, d) } }, [n("span", { staticClass: "el-dropdown-link pointer" }, [t._v(" " + t._s(t.value2name(t.condition1, i.c1value))), n("i", { staticClass: "el-icon-arrow-down el-icon--right" })]), n("el-dropdown-menu", { attrs: { slot: "dropdown" }, slot: "dropdown" }, t._l(t.condition0, function(e) {
         return n("el-dropdown-item", { key: e.id, attrs: { command: e.id, disabled: d === 0 } }, [t._v(t._s(e.name))]);
       }), 1)], 1)], 1), n("el-col", { attrs: { span: 8 } }, [n("div", [n("el-select", { attrs: { slot: "prepend", placeholder: "\u8BF7\u9009\u62E9" }, slot: "prepend", model: { value: i.field, callback: function(e) {
         t.$set(i, "field", e);
       }, expression: "item.field" } }, t._l(t.fields, function(e) {
         return n("el-option", { key: e.id, attrs: { label: e.name, value: e.id } });
-      }), 1)], 1)]), n("el-col", { attrs: { span: 3 } }, [n("el-dropdown", { on: { command: (e) => t.handleCommand(e, s, d) } }, [n("span", { staticClass: "el-dropdown-link" }, [t._v(" " + t._s(t.value2name(t.condition2, i.c2value))), n("i", { staticClass: "el-icon-arrow-down el-icon--right" })]), n("el-dropdown-menu", { attrs: { slot: "dropdown" }, slot: "dropdown" }, t._l(t.condition2, function(e) {
+      }), 1)], 1)]), n("el-col", { attrs: { span: 3 } }, [n("el-dropdown", { on: { command: (e) => t.handleCommand(e, s, d) } }, [n("span", { staticClass: "el-dropdown-link pointer" }, [t._v(" " + t._s(t.value2name(t.condition2, i.c2value))), n("i", { staticClass: "el-icon-arrow-down el-icon--right" })]), n("el-dropdown-menu", { attrs: { slot: "dropdown" }, slot: "dropdown" }, t._l(t.condition2, function(e) {
         return n("el-dropdown-item", { key: e.id, attrs: { command: e.id } }, [t._v(t._s(e.name))]);
       }), 1)], 1)], 1), n("el-col", { attrs: { span: 8 } }, [n("el-input", { attrs: { placeholder: "\u8BF7\u8F93\u5165" }, model: { value: i.value, callback: function(e) {
         t.$set(i, "value", e);
@@ -115,7 +115,7 @@ var C = function() {
       } } })])], 1), d === r.group.length - 1 ? n("div", { staticClass: "mt10 colorblue inline-block", on: { click: function(e) {
         return t.addCondition(s);
       } } }, [n("i", { staticClass: "el-icon-circle-plus-outline", staticStyle: { cursor: "pointer" } }), n("a", [t._v("\u6DFB\u52A0\u6761\u4EF6")])]) : t._e()], 1);
-    }), s < t.thisData.length - 1 ? n("div", [n("div", { staticClass: "flex-center-center" }, [n("div", { staticClass: "line" }), n("div", { staticClass: "h-center" }, [n("el-dropdown", { staticStyle: { "text-align": "center" }, on: { command: (i) => t.handle0Command(i, s) } }, [n("span", { staticClass: "el-dropdown-link fontSize17" }, [t._v(" " + t._s(t.value2name(t.condition0, r.c0))), n("i", { staticClass: "el-icon-arrow-down el-icon--right" })]), n("el-dropdown-menu", { attrs: { slot: "dropdown" }, slot: "dropdown" }, t._l(t.condition0, function(i) {
+    }), s < t.thisData.length - 1 ? n("div", [n("div", { staticClass: "flex-center-center" }, [n("div", { staticClass: "line" }), n("div", { staticClass: "h-center" }, [n("el-dropdown", { staticStyle: { "text-align": "center" }, on: { command: (i) => t.handle0Command(i, s) } }, [n("span", { staticClass: "el-dropdown-link fontSize17 pointer" }, [t._v(" " + t._s(t.value2name(t.condition0, r.c0))), n("i", { staticClass: "el-icon-arrow-down el-icon--right" })]), n("el-dropdown-menu", { attrs: { slot: "dropdown" }, slot: "dropdown" }, t._l(t.condition0, function(i) {
       return n("el-dropdown-item", { key: i.id, attrs: { command: i.id } }, [t._v(t._s(i.name))]);
     }), 1)], 1)], 1), n("div", { staticClass: "line" })])]) : t._e()], 2);
   }), n("div", { staticStyle: { "text-align": "center" } }, [n("div", { staticClass: "mt10 colorblue inline-block fontSize20", on: { click: function(r) {
@@ -127,7 +127,7 @@ var C = function() {
   w,
   !1,
   null,
-  "16c32e25",
+  "08bb2780",
   null,
   null
 );

@@ -17,7 +17,7 @@
                 (command) => handle1Command(command, groupIndex, itemIndex)
               "
             >
-              <span class="el-dropdown-link">
+              <span class="el-dropdown-link pointer">
                 {{ value2name(condition1, item.c1value)
                 }}<i class="el-icon-arrow-down el-icon--right"></i>
               </span>
@@ -56,7 +56,7 @@
                 (command) => handleCommand(command, groupIndex, itemIndex)
               "
             >
-              <span class="el-dropdown-link">
+              <span class="el-dropdown-link pointer">
                 {{ value2name(condition2, item.c2value)
                 }}<i class="el-icon-arrow-down el-icon--right"></i>
               </span>
@@ -101,7 +101,7 @@
               style="text-align: center"
               @command="(command) => handle0Command(command, groupIndex)"
             >
-              <span class="el-dropdown-link fontSize17">
+              <span class="el-dropdown-link fontSize17 pointer">
                 {{ value2name(condition0, groupItem.c0)
                 }}<i class="el-icon-arrow-down el-icon--right"></i>
               </span>
@@ -272,5 +272,8 @@ export default {
   flex: 1;
   height: 1px;
   background-color: black;
+}
+.pointer {
+  cursor: pointer;
 }
 </style>

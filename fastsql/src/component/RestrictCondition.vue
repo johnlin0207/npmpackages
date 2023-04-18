@@ -1,6 +1,5 @@
 <script setup>
-import fastsql from "fastsql-vue";
-import "fastsql-vue/dist/style.css";
+import fastsql from "../package/fastsql";
 import { ref, reactive } from "vue";
 const props = defineProps({
   fields: Array,
