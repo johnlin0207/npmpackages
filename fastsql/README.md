@@ -2,6 +2,8 @@
 
 fastsql-vue is a vue component for fast handle sql relation,finally generating a json data.
 
+![这是图片](https://github.com/johnlin0207/npmpackages/blob/main/fastsql/public/demo.png?raw=true "fastsql-vue")
+
 # props
 
     fields: [{name: String, id: String}, {} ...]
