@@ -5,6 +5,31 @@
       :key="groupIndex"
       class="con-group"
     >
+      <div v-if="groupIndex !== 0">
+        <div class="flex-center-center">
+          <div class="line"></div>
+          <div class="h-center">
+            <el-dropdown
+              style="text-align: center"
+              @command="(command) => handle0Command(command, groupIndex)"
+            >
+              <span class="el-dropdown-link fontSize17 pointer">
+                {{ value2name(condition0, groupItem.c0)
+                }}<i class="el-icon-arrow-down el-icon--right"></i>
+              </span>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item
+                  v-for="condition1item in condition0"
+                  :key="condition1item.id"
+                  :command="condition1item.id"
+                  >{{ condition1item.name }}</el-dropdown-item
+                >
+              </el-dropdown-menu>
+            </el-dropdown>
+          </div>
+          <div class="line"></div>
+        </div>
+      </div>
       <div
         v-for="(item, itemIndex) in groupItem.group"
         :key="item.id"
@@ -92,33 +117,6 @@
           ><a>添加条件</a>
         </div>
       </div>
-
-      <div v-if="groupIndex < thisData.length - 1">
-        <div class="flex-center-center">
-          <div class="line"></div>
-          <div class="h-center">
-            <el-dropdown
-              style="text-align: center"
-              @command="(command) => handle0Command(command, groupIndex)"
-            >
-              <span class="el-dropdown-link fontSize17 pointer">
-                {{ value2name(condition0, groupItem.c0)
-                }}<i class="el-icon-arrow-down el-icon--right"></i>
-              </span>
-              <el-dropdown-menu slot="dropdown">
-                <!--     :disabled="itemIndex === 0" -->
-                <el-dropdown-item
-                  v-for="condition1item in condition0"
-                  :key="condition1item.id"
-                  :command="condition1item.id"
-                  >{{ condition1item.name }}</el-dropdown-item
-                >
-              </el-dropdown-menu>
-            </el-dropdown>
-          </div>
-          <div class="line"></div>
-        </div>
-      </div>
     </div>
     <div style="text-align: center">
       <div class="mt10 colorblue inline-block fontSize20" @click="addGroup()">
@@ -187,6 +185,9 @@ export default {
       return thisItem.name;
     },
     handle0Command(command, groupIndex) {
+      console.log("====================================");
+      console.log(command, groupIndex);
+      console.log("====================================");
       this.thisData[groupIndex].c0 = command;
     },
     // 当且操作
