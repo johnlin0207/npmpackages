@@ -39,3 +39,8 @@ fastsql-vue is a vue component for fast handle sql relation,finally generating a
     <fastsql :fields="fields" :data="data" ref="childComp"></fastsql>
 
     childComp.value.getData()
+    
+# github
+https://github.com/johnlin0207/npmpackages/tree/main/fastsql
+
+Welcome fork & contribute
