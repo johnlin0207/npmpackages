@@ -35,6 +35,6 @@ export default defineConfig({
           vue: "Vue",
         },
       },
-    }, // rollup打包配置
+    },
   },
 });
