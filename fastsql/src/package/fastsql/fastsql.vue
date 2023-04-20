@@ -185,9 +185,6 @@ export default {
       return thisItem.name;
     },
     handle0Command(command, groupIndex) {
-      console.log("====================================");
-      console.log(command, groupIndex);
-      console.log("====================================");
       this.thisData[groupIndex].c0 = command;
     },
     // 当且操作
