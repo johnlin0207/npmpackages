@@ -1,6 +1,6 @@
 {
   "name": "fastsql-vue",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "type": "module",
   "main": "./dist/index.js",
   "author": "johnlin",
@@ -9,6 +9,10 @@
     "vue2",
     "SQL"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnlin0207/npmpackages.git"
+  },
   "exports": {
     ".": "./dist/index.js",
     "./dist/style.css": {
