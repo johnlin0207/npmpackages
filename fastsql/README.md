@@ -53,3 +53,27 @@ fastsql-vue is a vue2 component for fast handle sql relation,finally generating 
 
 # i18n support
 Important: From fastsql-vue@1.2.0 you must add vue-i18n(which version is compatible with vue2.x) and configuration in your project to support i18n.
+    
+    import Vue from "vue";
+    import VueI18n from "vue-i18n";
+    import zh from "fastsql-vue/dist/zh_CN";
+    import en from "fastsql-vue/dist/en";
+    
+    Vue.use(VueI18n);
+    const i18n = new VueI18n({
+      locale: "zh",
+      fallbackLocale: "zh",
+      messages: {
+        zh: {
+          ...zh,
+        },
+        en: {
+          ...en,
+        },
+      },
+    });
+    
+    new Vue({
+      render: (h) => h(App),
+      i18n,
+    }).$mount("#app");

@@ -1,6 +1,6 @@
 {
   "name": "fastsql-vue",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "type": "module",
   "main": "./dist/index.js",
   "author": "johnlin",
@@ -18,7 +18,9 @@
     "./dist/style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
-    }
+    },
+    "./dist/en": "./dist/en.js",
+    "./dist/zh_CN": "./dist/zh_CN.js"
   },
   "private": false,
   "scripts": {
