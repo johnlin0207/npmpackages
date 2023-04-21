@@ -2,7 +2,7 @@
 
 fastsql-vue is a vue2 component for fast handle sql relation,finally generating a json data.
 
-![这是图片](https://github.com/johnlin0207/npmpackages/blob/main/fastsql/public/demo.png?raw=true "fastsql-vue")
+![this is a demonstrate image](https://github.com/johnlin0207/npmpackages/blob/main/fastsql/public/demo.png?raw=true "fastsql-vue")
 
 # props
 
@@ -33,10 +33,20 @@ fastsql-vue is a vue2 component for fast handle sql relation,finally generating 
     ]
 
 # usage
-
+### import locally
+    // vue component
+    
     import fastsql from "fastsql-vue";
     import "fastsql-vue/dist/style.css";
+    
+### import as a plugin for globally
+    // main.js
+    
+    import fastsql from "fastsql-vue";
+    import "fastsql-vue/dist/style.css";
+    Vue.use(fastsql);
 
+### get data
     <fastsql :fields="fields" :data="data" ref="childComp"></fastsql>
-
+    
     childComp.getData()

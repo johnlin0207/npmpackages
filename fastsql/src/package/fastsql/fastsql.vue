@@ -128,7 +128,7 @@
 
 <script>
 export default {
-  name: "FastSql",
+  name: "fastsql",
   props: {
     fields: {
       type: Array,

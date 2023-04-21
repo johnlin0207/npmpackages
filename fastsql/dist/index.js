@@ -1,4 +1,4 @@
-function f(a, t, n, r, s, i, d, e) {
+function h(a, t, n, r, s, i, d, e) {
   var o = typeof a == "function" ? a.options : a;
   t && (o.render = t, o.staticRenderFns = n, o._compiled = !0), r && (o.functional = !0), i && (o._scopeId = "data-v-" + i);
   var c;
@@ -13,8 +13,8 @@ function f(a, t, n, r, s, i, d, e) {
     if (o.functional) {
       o._injectStyles = c;
       var v = o.render;
-      o.render = function(h, _) {
-        return c.call(_), v(h, _);
+      o.render = function(f, _) {
+        return c.call(_), v(f, _);
       };
     } else {
       var p = o.beforeCreate;
@@ -26,7 +26,7 @@ function f(a, t, n, r, s, i, d, e) {
   };
 }
 const m = {
-  name: "FastSql",
+  name: "fastsql",
   props: {
     fields: {
       type: Array,
@@ -121,13 +121,13 @@ var C = function() {
   }), n("div", { staticStyle: { "text-align": "center" } }, [n("div", { staticClass: "mt10 colorblue inline-block fontSize20", on: { click: function(r) {
     return t.addGroup();
   } } }, [n("i", { staticClass: "el-icon-plus", staticStyle: { cursor: "pointer" } }), n("a", [t._v("\u6DFB\u52A0\u5206\u7EC4")])])])], 2);
-}, w = [], y = /* @__PURE__ */ f(
+}, w = [], y = /* @__PURE__ */ h(
   m,
   C,
   w,
   !1,
   null,
-  "20a21cc8",
+  "7edc36ec",
   null,
   null
 );
