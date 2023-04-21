@@ -63,7 +63,7 @@
               <el-select
                 v-model="item.field"
                 slot="prepend"
-                placeholder="请选择"
+                :placeholder="$t('select')"
               >
                 <el-option
                   v-for="field in fields"
@@ -97,7 +97,10 @@
           </el-col>
 
           <el-col :span="8">
-            <el-input v-model="item.value" placeholder="请输入"></el-input>
+            <el-input
+              v-model="item.value"
+              :placeholder="$t('input')"
+            ></el-input>
           </el-col>
 
           <el-col :span="2" style="text-align: center">
@@ -114,13 +117,14 @@
           @click="addCondition(groupIndex)"
         >
           <i class="el-icon-circle-plus-outline" style="cursor: pointer"></i
-          ><a>添加条件</a>
+          ><a>{{ $t("addCondition") }}</a>
         </div>
       </div>
     </div>
     <div style="text-align: center">
       <div class="mt10 colorblue inline-block fontSize20" @click="addGroup()">
-        <i class="el-icon-plus" style="cursor: pointer"></i><a>添加分组</a>
+        <i class="el-icon-plus" style="cursor: pointer"></i
+        ><a>{{ $t("addGroup") }}</a>
       </div>
     </div>
   </div>
@@ -141,23 +145,29 @@ export default {
   },
   data() {
     return {
-      condition0: [
-        { name: "且", id: "and" },
-        { name: "或", id: "or" },
-      ],
-      condition1: [
-        { name: "当", id: "when" },
-        { name: "且", id: "and" },
-        { name: "或", id: "or" },
-      ],
-      condition2: [
-        { name: "等于", id: "＝" },
-        { name: "不等于", id: "≠" },
-        { name: "大于", id: "＞" },
-        { name: "小于", id: "＜" },
-      ],
+      condition0: [],
+      condition1: [],
+      condition2: [],
       thisData: this.data,
     };
+  },
+
+  mounted() {
+    this.condition0 = [
+      { name: this.$t("and"), id: "and" },
+      { name: this.$t("or"), id: "or" },
+    ];
+    this.condition1 = [
+      { name: this.$t("when"), id: "when" },
+      { name: this.$t("and"), id: "and" },
+      { name: this.$t("or"), id: "or" },
+    ];
+    this.condition2 = [
+      { name: this.$t("equal"), id: "＝" },
+      { name: this.$t("noequal"), id: "≠" },
+      { name: this.$t("bigger"), id: "＞" },
+      { name: this.$t("smaller"), id: "＜" },
+    ];
   },
 
   methods: {
@@ -208,6 +218,7 @@ export default {
       this.thisData = temp;
     },
     getData() {
+      this.thisData[0] && (this.thisData[0].c0 = null);
       return this.thisData;
     },
   },

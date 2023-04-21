@@ -50,3 +50,6 @@ fastsql-vue is a vue2 component for fast handle sql relation,finally generating 
     <fastsql :fields="fields" :data="data" ref="childComp"></fastsql>
     
     childComp.getData()
+
+# i18n support
+Important: From fastsql-vue@1.2.0 you must add vue-i18n(which version is compatible with vue2.x) and configuration in your project to support i18n.
