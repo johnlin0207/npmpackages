@@ -63,7 +63,7 @@
               <el-select
                 v-model="item.field"
                 slot="prepend"
-                :placeholder="$t('select')"
+                :placeholder="$t('fastsql_select')"
               >
                 <el-option
                   v-for="field in fields"
@@ -99,7 +99,7 @@
           <el-col :span="8">
             <el-input
               v-model="item.value"
-              :placeholder="$t('input')"
+              :placeholder="$t('fastsql_input')"
             ></el-input>
           </el-col>
 
@@ -117,14 +117,14 @@
           @click="addCondition(groupIndex)"
         >
           <i class="el-icon-circle-plus-outline" style="cursor: pointer"></i
-          ><a>{{ $t("addCondition") }}</a>
+          ><a>{{ $t("fastsql_addCondition") }}</a>
         </div>
       </div>
     </div>
     <div style="text-align: center">
       <div class="mt10 colorblue inline-block fontSize20" @click="addGroup()">
         <i class="el-icon-plus" style="cursor: pointer"></i
-        ><a>{{ $t("addGroup") }}</a>
+        ><a>{{ $t("fastsql_addGroup") }}</a>
       </div>
     </div>
   </div>
@@ -154,19 +154,19 @@ export default {
 
   mounted() {
     this.condition0 = [
-      { name: this.$t("and"), id: "and" },
-      { name: this.$t("or"), id: "or" },
+      { name: this.$t("fastsql_and"), id: "and" },
+      { name: this.$t("fastsql_or"), id: "or" },
     ];
     this.condition1 = [
-      { name: this.$t("when"), id: "when" },
-      { name: this.$t("and"), id: "and" },
-      { name: this.$t("or"), id: "or" },
+      { name: this.$t("fastsql_when"), id: "when" },
+      { name: this.$t("fastsql_and"), id: "and" },
+      { name: this.$t("fastsql_or"), id: "or" },
     ];
     this.condition2 = [
-      { name: this.$t("equal"), id: "＝" },
-      { name: this.$t("noequal"), id: "≠" },
-      { name: this.$t("bigger"), id: "＞" },
-      { name: this.$t("smaller"), id: "＜" },
+      { name: this.$t("fastsql_equal"), id: "equal" },
+      { name: this.$t("fastsql_noequal"), id: "noequal" },
+      { name: this.$t("fastsql_bigger"), id: "bigger" },
+      { name: this.$t("fastsql_smaller"), id: "smaller" },
     ];
   },
 
@@ -178,13 +178,13 @@ export default {
       this.thisData.push({ c0: "and", group: [this.firstCondition()] });
     },
     firstCondition() {
-      return { c1value: "when", field: "", c2value: "＝", value: "" };
+      return { c1value: "when", field: "", c2value: "equal", value: "" };
     },
     otherCondition() {
       return {
         c1value: "and",
         field: "",
-        c2value: "＝",
+        c2value: "equal",
         value: "",
       };
     },
