@@ -32,6 +32,14 @@ fastsql-vue is a vue2 component for fast handle sql relation,finally generating 
       }
     ]
 
+# instance methods
+
+    function clearData() // clear all data
+
+    function setData(data: Array) // set data
+
+    function getData():data // get data
+
 # usage
 
 ### import locally

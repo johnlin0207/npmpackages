@@ -217,6 +217,15 @@ export default {
       }
       this.thisData = temp;
     },
+    // 清空当前数据
+    clearData() {
+      this.thisData = [];
+    },
+    // 设置回显数据
+    setData(data) {
+      this.thisData = data || [];
+    },
+    // 用于向外抛出数据
     getData() {
       this.thisData[0] && (this.thisData[0].c0 = null);
       return this.thisData;

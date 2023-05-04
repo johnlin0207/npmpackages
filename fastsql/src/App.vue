@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import RestrictCondition from "./component/RestrictCondition.vue";
 const fields = ref([
   { name: "name", id: "name" },

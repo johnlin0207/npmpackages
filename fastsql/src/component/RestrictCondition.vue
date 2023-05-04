@@ -8,6 +8,7 @@ const props = defineProps({
 
 const childComp = ref(null);
 const confirm = () => {
+  childComp.value.clearData();
   console.log("====================================");
   console.log(childComp.value.getData());
   console.log("====================================");
