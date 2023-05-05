@@ -38,7 +38,7 @@ fastsql-vue is a vue2 component for fast handle sql relation,finally generating 
 
     function setData(data: Array) // set data
 
-    function getData():data // get data
+    function getData():data | false // get component data,if validating failed return false,otherwise return an array data
 
 # usage
 

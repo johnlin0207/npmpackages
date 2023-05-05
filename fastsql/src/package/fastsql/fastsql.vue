@@ -192,11 +192,15 @@ export default {
   methods: {
     // 表单校验
     submitForm(formName) {
+      let flag = false;
       this.$refs[formName].validate((valid) => {
         if (!valid) {
-          return false;
+          flag = false;
+        } else {
+          flag = true;
         }
       });
+      return flag;
     },
     addCondition(groupIndex) {
       this.thisData.data[groupIndex].group.push(this.otherCondition());
