@@ -46,8 +46,20 @@ const v = {
         data: []
       },
       rules: {
-        field: [{ required: !0, message: "\u8BF7\u9009\u62E9", trigger: "change" }],
-        value: [{ required: !0, message: "\u8BF7\u586B\u5199", trigger: "blur" }]
+        field: [
+          {
+            required: !0,
+            message: this.$t("fastsql_select"),
+            trigger: "change"
+          }
+        ],
+        value: [
+          {
+            required: !0,
+            message: this.$t("fastsql_input"),
+            trigger: "blur"
+          }
+        ]
       }
     };
   },
@@ -146,17 +158,17 @@ var C = function() {
   }), 0), a("div", { staticStyle: { "text-align": "center" } }, [a("div", { staticClass: "mt10 colorblue inline-block fontSize20", on: { click: function(o) {
     return t.addGroup();
   } } }, [a("i", { staticClass: "el-icon-plus", staticStyle: { cursor: "pointer" } }), a("a", [t._v(t._s(t.$t("fastsql_addGroup")))])])])], 1);
-}, w = [], $ = /* @__PURE__ */ m(
+}, $ = [], w = /* @__PURE__ */ m(
   v,
   C,
-  w,
+  $,
   !1,
   null,
-  "e57065b1",
+  "73f012e8",
   null,
   null
 );
-const u = $.exports;
+const u = w.exports;
 u.install = (e) => e.component(u.name, u);
 export {
   u as default

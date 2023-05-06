@@ -166,8 +166,20 @@ export default {
         data: [],
       },
       rules: {
-        field: [{ required: true, message: "请选择", trigger: "change" }],
-        value: [{ required: true, message: "请填写", trigger: "blur" }],
+        field: [
+          {
+            required: true,
+            message: this.$t("fastsql_select"),
+            trigger: "change",
+          },
+        ],
+        value: [
+          {
+            required: true,
+            message: this.$t("fastsql_input"),
+            trigger: "blur",
+          },
+        ],
       },
     };
   },
