@@ -6,7 +6,7 @@ fastsql-vue is a vue2 component for fast handle sql relation,finally generating 
 
 # props
 
-    fields: [{name: String, id: String}, {} ...]
+    fields: [  { name: "name", id: "name", fieldType: "string" }, { name: "age", id: "age", fieldType: "number" }, ...]
     data: [
       {
         "c0": null, //outter dropdown selection
@@ -15,7 +15,8 @@ fastsql-vue is a vue2 component for fast handle sql relation,finally generating 
             "c1value": "when", // inner dropdown selection1
             "field": "username",
             "c2value": "equal", // inner dropdown selection2
-            "value": "asdsadsad"
+            "value": "tom",
+            "fieldType": "string"
           }
         ]
       },
@@ -24,9 +25,10 @@ fastsql-vue is a vue2 component for fast handle sql relation,finally generating 
         "group": [
           {
             "c1value": "when",
-            "field": "nick_name",
+            "field": "age",
             "c2value": "noequal",
-            "value": "123123213"
+            "value": "26",
+            "fieldType": "number"
           }
         ]
       }

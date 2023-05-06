@@ -69,6 +69,7 @@
                 <el-select
                   v-model="item.field"
                   :placeholder="$t('fastsql_select')"
+                  @change="(v) => selectField(v, item)"
                 >
                   <el-option
                     v-for="field in fields"
@@ -190,6 +191,13 @@ export default {
   },
 
   methods: {
+    selectField(...args) {
+      const [id, item] = args;
+      const thisItem = this.fields.find((item) => {
+        return item.id === id;
+      });
+      item.fieldType = thisItem.fieldType || null;
+    },
     // 表单校验
     submitForm(formName) {
       let flag = false;
